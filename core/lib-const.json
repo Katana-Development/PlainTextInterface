@@ -1,0 +1,5 @@
+{
+    "CLI": {
+        "MSG_INITITAL": "\n\t ** PLAIN-TEXT CMD-LINE INTERFACE ** \n\t\t (1) --help   \"Help flag prints a guide thats a bit more detailed than this message.\" \n\t\t (2) --linelen Sets the maximum character-length in a text file by recursivly adding line breaks. Very cool algorithm. (Never breaks a word apart).\n"
+    }
+}

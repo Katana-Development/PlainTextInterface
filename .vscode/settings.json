@@ -1,0 +1,811 @@
+{
+    //  |>  ZOOM SETTING <|
+    "window.zoomLevel": 0,
+
+    //  |>  Font-Settings: 'Editor'
+    "editor.fontSize": 14,
+    "editor.fontWeight": 500,
+    "editor.lineHeight": 28,
+    "editor.fontFamily": "'Cascadia Code'",
+    "editor.fontLigatures": true,
+
+    //  |>  AESTHETICS
+    "editor.showFoldingControls": "always",
+
+    //  |>  Editor Padding
+    "editor.padding.top": 175, //------------- VERTICAL
+    "editor.padding.bottom": 400, //---------- VERTICAL
+    "editor.scrollBeyondLastColumn": 4, //---- HORIZONTAL
+    "editor.scrollBeyondLastLine": false,
+    "editor.suggest.showIcons": true,
+
+    //  |>  Breadcrumbs Settings
+    "breadcrumbs.icons": true,
+    "breadcrumbs.enabled": true,
+    "breadcrumbs.filePath": "last",
+    "breadcrumbs.symbolPath": "last",
+    "breadcrumbs.symbolSortOrder": "type",
+
+    //  |>  Workbench Settings
+    "workbench.tree.indent": 16,
+    "workbench.editor.limit.value": 3,
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.showIcons": false,
+    "workbench.tips.enabled": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.tabCloseButton": "off",
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.view.alwaysShowHeaderActions": true,
+    "workbench.editor.mouseBackForwardToNavigate": false,
+    "workbench.editor.labelFormat": "short",
+    "workbench.editor.pinnedTabSizing": "shrink",
+
+    //  |>  Font-Settings: 'Terminal'
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontWeight": "600",
+    "terminal.integrated.fontWeightBold": "900",
+    "terminal.integrated.fontFamily": "'Hasklig', monospace",
+
+    //  |>  Cursor Settings
+    "editor.cursorStyle": "line",
+    "editor.cursorWidth": 4,
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.multiCursorModifier": "alt",
+    "editor.multiCursorPaste": "full",
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorWidth": 3,
+    "terminal.integrated.cursorBlinking": true,
+
+    //  |>  Editor Indentation
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "editor.highlightActiveIndentGuide": true,
+    "editor.renderIndentGuides": true,
+    "html.format.indentInnerHtml": true,
+
+    //  |>  Line/Line-Number Settings
+    "editor.rulers": [40, 65, 90, 125],
+    "editor.wordWrapColumn": 90,
+    "html.format.wrapLineLength": 125,
+    "editor.foldingStrategy": "indentation",
+    "editor.renderLineHighlight": "all",
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wrappingStrategy": "advanced",
+    "html.format.wrapAttributes": "force-aligned",
+
+    //  |>  Minimap Options/Settings
+    "editor.minimap.maxColumn": 80,
+    "editor.minimap.scale": 1,
+    "editor.minimap.enabled": true,
+    "editor.minimap.renderCharacters": true,
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.size": "proportional",
+
+    //  |>  VSC-Themes
+    "workbench.preferredDarkColorTheme": "JS_Dojo",
+    "workbench.colorTheme": "JS_Dojo",
+    "workbench.iconTheme": "material-icon-theme",
+
+    //  |>  Formatting & Save Actions (Format on Save)
+    "files.autoSaveDelay": 2000,
+    "editor.formatOnSave": true,
+
+    //  |>  SETTINGS BY LANGUAGE
+
+    //      <--------( JavaScript )-------->
+    "[javascript]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true,
+            "source.organizeImports": true
+        }
+    },
+
+    //      <--------( JSON & JSONC )-------->
+    "[json, jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true,
+            "source.organizeImports": true
+        }
+    },
+
+    //      <--------( Markdown & Markdown-Linting )-------->
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.markdownlint": true
+        }
+    },
+    "markdownlint.config": {
+        "default": true,
+        "MD003": { "style": "atx_closed" },
+        "MD007": { "indent": 4 },
+        "no-hard-tabs": false
+    },
+    "markdownlint.run": "onSave",
+    "markdownlint.customRules": [],
+    "markdown.preview.breaks": true,
+    /*
+
+    
+    <-------------------<( Miscellaneous )>-------------------> 			  */
+
+    "files.simpleDialog.enable": true,
+    "problems.showCurrentInStatus": true,
+    /*
+
+    <|=============================v=============================|>
+                      <*> SETTINGS BY EXTENTION <*>
+    <|===========================================================|>
+    
+
+
+    <-------------------<( BETTER COMMENTS )>------------------->             */
+    "better-comments.tags": [
+        //  |> Hello World! <|    ("Space After Highlighter Required")
+        //  <| Hello World! |>    ("Space After Highlighter Required")
+        //  <|====== 6x('=')
+        //  <|====|>
+        //     ~~ <| HELLO~WORLD |> ~~
+        //     -- <| HELLO_WORLD |> --
+        //     <<--<| HELLO-WORLD |>-->>
+        //     ~~<| HELLO~WORLD |>~~
+        //     --<| HELLO_WORLD |>--
+        {
+            "tag": " |> ",
+            "color": "#FF3280",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": " <| ",
+            "color": "#FF3280",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": " <|[",
+            "color": "#FF3280",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": " <|(",
+            "color": "#FF3280",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+
+        {
+            "tag": "~~ <|",
+            "color": "#FF3280",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": "~~<|",
+            "color": "#FF3280",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": "-- <|",
+            "color": "#FF3280",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": "--<|",
+            "color": "#FF3280",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": " <|=",
+            "color": "#FF3280",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": "<|====",
+            "color": "#FF3280",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+
+        // ==>  Hello World! ("Space After Highlighter Required")
+        // |=>   Hello World! ("Space After Highlighter Required")
+        // <=|  Hello World! ("Space After Highlighter Required")
+
+        // <==  Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
+
+        // =>   Hello World! ("Space After Highlighter Required")
+        // <=>  Hello World! ("Space After Highlighter Required")
+
+        // <|==|> `~ 1! 2@ 3# 4$ 5% 6^ 7& 8* 9( 0) -_ =+
+
+        // <=====> [] {} <> () |\ /? ,. :; '' "" ``
+        // <============================================
+        // <==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==>
+
+        {
+            "tag": "<========",
+            "color": "#FF8040",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "<==",
+            "color": "#FF8040",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": " => ",
+            "color": "#FF8040",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": " ==> ",
+            "color": "#FF8040",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": " <=> ",
+            "color": "#FF8040",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": " <=|",
+            "color": "#FF8040",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "|=>",
+            "color": "#FF8040",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        // -> Hello World
+        // --> Hello Multi-Verse!
+        /*
+     <-- Hello
+    */
+        // <--> `~ 1! 2@ 3# 4$ 5% 6^ 7& 8* 9( 0) -_ =+
+        // <---> [] {} <> () |\ /? ,. :; '' "" ``
+        // ----- 5x('-')
+        // ---------------------------------------------
+        // <--------------------------------------------------------->
+        // <-- ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ -->
+        {
+            "tag": "--> ",
+            "color": "#80D040",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": "<--",
+            "color": "#80D040",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": "->",
+            "color": "#80D040",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        // ~> Hello World! ("Space After Highlighter Required")
+        // <~ Hello World! ("Space After Highlighter Required")
+        // << Hello World! ('No Space Needed')
+        // >> Hello World! ('No Space Needed')
+        // ~~>> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll
+        // <<~~ Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll
+        // <<~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>>
+        // << << Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy
+        // >> >> Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy
+        // <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
+        // <<~~~|HELLO ANDREW|~~~>>
+        // ~> Hello World!!!
+        {
+            "tag": ">> ",
+            "color": "#18B8FF",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+
+        {
+            "tag": "<<",
+            "color": "#18B8FF",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+
+        {
+            "tag": "~> ",
+            "color": "#18B8FF",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+
+        {
+            "tag": " <~",
+            "color": "#18B8FF",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+
+        {
+            "tag": " ~~> ",
+            "color": "#18B8FF",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+
+        {
+            "tag": "<~~",
+            "color": "#18B8FF",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+
+        {
+            "tag": "~~~>",
+            "color": "#18B8FF",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+
+        {
+            "tag": "<~~~",
+            "color": "#18B8FF",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+
+        {
+            "tag": "~~>>",
+            "color": "#18B8FF",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+
+        //  ||> HELLO WORLD! <||
+        //  <|| HELLO WORLD! ||>
+        //  <||=================================||>
+        //  <||---------------------------------||>
+        //  <||~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~||>
+        //  <||_________________________________||>
+        //  <|| . . . . . . . . . . . . . . . . ||>
+        //  <|| ******************************* ||>
+        //  <||+++++++++++++++++++++++++++++++++||>
+        //  <|| ``````````````````````````````` ||>
+        //  <|||||||||||||||||||||||||||||||||||||>
+        //  <||>*<*>*<*>*<*>*<*>*<*>*<*>*<*>*<*>||>
+        //  <||><*><*><*><*><*><*><*><*><*><*><||>
+        //  <||>o<(X)>o<(X)>o<(X)>o<(X)>o<(X)>o<||>
+        //  <||XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX||>
+        //  <||xX|XxX|XxX|XxX|XxX|XxX|XxX|XxX|Xx||>
+        //  <|||><||><|><||><(~8~)><||><|><||><|||>
+        //  <||OoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoO||>
+        //  <||x|X|x||> * <||x|X|x||> * <||x|X|x||>
+        {
+            "tag": "||>",
+            "color": "#DDBB40",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": "<||",
+            "color": "#DDBB40",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+
+        {
+            "tag": "<||==",
+            "color": "#DDBB40",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": "____",
+            "color": "#DDBB40",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        // >--> Hello World!
+        // >-> Hello World!
+        // >>--> Hello World!
+        // >>-> Hello World!
+        // >-->> Hello World!
+        // >->> Hello World!
+        // >>-->> Hello World!
+        // >>-> Hello World!
+        // ======
+        // ===========================
+        // >>>
+        {
+            "tag": ":",
+            "color": "#B05FF4",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": "<|:|>",
+            "color": "#B05FF4",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": "<|===:===|>",
+            "color": "#B05FF4",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+
+        {
+            "tag": "<|==:==|>",
+            "color": "#B05FF4",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": "<|=:=|>",
+            "color": "#B05FF4",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+
+        {
+            "tag": "===",
+            "color": "#B05FF4",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": ">>>",
+            "color": "#B05FF4",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": ">>->",
+            "color": "#B05FF4",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": ">>-->",
+            "color": "#B05FF4",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": ">>->>",
+            "color": "#B05FF4",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": ">->",
+            "color": "#B05FF4",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": ">->>",
+            "color": "#B05FF4",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": ">>-->>",
+            "color": "#B05FF4",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": ">-->",
+            "color": "#B05FF4",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": ">-->>",
+            "color": "#B05FF4",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        // <*>  Hello World! ("Space After Highlighter Required")
+        // <>   Hello World! ("Space After Highlighter Required")
+        //  *   Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
+        //  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+        // ........................................................................................
+        // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        // *      1x ('*')
+        // ...    3x ('.')
+        // ^^^^^  5x ('^')
+        {
+            "tag": "<>",
+            "color": "#D2D2C8",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "<*>",
+            "color": "#D2D2C8",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": " * ",
+            "color": "#D2D2C8",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "...",
+            "color": "#D2D2C8",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "#transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "`````",
+            "color": "#D2D2C8",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "#transparent",
+            "bold": false,
+            "italic": false
+        },
+        // // Crissed-Out
+        {
+            "tag": "//",
+            "color": "#545468",
+            "strikethrough": true,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        // !!|> !!ISSUE!!
+        // !!|> !!ERROR!!
+        // !!|> !!BUG!!
+        // !!|> !!BROKEN!!
+        // !!|> !!FIX IT!!
+        {
+            "tag": " !!|> ",
+            "color": "#FF1F00",
+            "strikethrough": false,
+            "underline": true,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        // !|> WARNING
+        // !|> CUATION
+        // !|> SLOW
+        // !|> PROBLIMATIC
+        // !|> NEEDS ATTENTION
+        // !|> DEPRECATED
+        {
+            "tag": " !|> ",
+            "color": "#F8FF00",
+            "strikethrough": false,
+            "underline": true,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        }
+    ],
+
+    "todo-tree.general.tags": [
+        // >> Group-A
+        "|> TODO: ",
+        "|> TODO ADD: ",
+        "|> TODO CREATE: ",
+        "|> TODO CHANGE: ",
+        // >> Group-B
+        "|> TODO REMOVE: ",
+        "|> TODO ISSUE: ",
+        "|> TODO FIX: ",
+        "|> TODO BUG: ",
+        // >> Group-C
+        "-[TODO REMINDER]-",
+        "-[TODO NOTE]-"
+    ],
+
+    "todo-tree.general.tagGroups": {
+        "TODO_GROUP_A": [
+            "|> TODO: ",
+            "|> TODO ADD: ",
+            "|> TODO CREATE: ",
+            "|> TODO CHANGE: "
+        ],
+        "TODO_GROUP_B": [
+            "|> TODO REMOVE: ",
+            "|> TODO ISSUE: ",
+            "|> TODO FIX: ",
+            "|> TODO BUG: "
+        ]
+    },
+    "todo-tree.highlights.customHighlight": {
+        "TODO": {
+            "icon": "check",
+            "type": "line"
+        },
+        "FIXME": {
+            "foreground": "black",
+            "iconColour": "yellow",
+            "gutterIcon": true
+        }
+    }
+}

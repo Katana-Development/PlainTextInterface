@@ -1,5 +1,41 @@
-# Object file
-*.o
+# Git Ver-Control
+.gitignore
+.gitconfig
+.git
 
-# Ada Library Information
-*.ali
+# VSCode Dev-Env
+.vscode/
+
+# Node.JS RTE
+node_modules
+
+# NPM PackageManager
+package.json
+
+# Linux OS
+.Env/
+
+# Files for Testing
+.sandbox/
+.test.js
+.testlog.txt
+.psuedotext.txt
+
+# Process Logs & Log-Dirs
+.cache/
+.tmp/
+.systemlog.txt
+.errorlog.txt
+
+# ESLint Linter
+.eslintrc.json
+
+# Prettier Bias-Formatter
+.prettierrc
+
+# Beautify Formatter
+.beautifyrc.json
+
+# Babel Backwords-Compatabilty Tool
+.babelrc.js
+.babelrc
