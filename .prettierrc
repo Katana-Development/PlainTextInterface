@@ -1,12 +1,12 @@
-{ 
-    "printWidth": 90,
+{
+    "printWidth": 85,
     "tabWidth": 4,
     "useTabs": false,
     "singleQuote": true,
-    "semi": true,  
+    "semi": true,
     "arrowParens": "always",
-    "trailingComma": "es5",
-    "insertPragma": false,
+    "trailingComma": "none",
+    "insertPragma": true,
     "requirePragma": false,
 
     "overrides": [

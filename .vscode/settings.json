@@ -1,11 +1,11 @@
 {
     //  |>  ZOOM SETTING <|
-    "window.zoomLevel": 0,
+    "window.zoomLevel": -0.5,
 
     //  |>  Font-Settings: 'Editor'
-    "editor.fontSize": 14,
-    "editor.fontWeight": 500,
-    "editor.lineHeight": 28,
+    "editor.fontSize": 14.25,
+    "editor.fontWeight": 400,
+    "editor.lineHeight": 24,
     "editor.fontFamily": "'Cascadia Code'",
     "editor.fontLigatures": true,
 
@@ -67,9 +67,9 @@
     "html.format.indentInnerHtml": true,
 
     //  |>  Line/Line-Number Settings
-    "editor.rulers": [40, 65, 90, 125],
-    "editor.wordWrapColumn": 90,
-    "html.format.wrapLineLength": 125,
+    "editor.rulers": [40, 85, 90, 92, 120],
+    "editor.wordWrapColumn": 92,
+    "html.format.wrapLineLength": 120,
     "editor.foldingStrategy": "indentation",
     "editor.renderLineHighlight": "all",
     "editor.wordWrap": "wordWrapColumn",
@@ -97,7 +97,7 @@
 
     //      <--------( JavaScript )-------->
     "[javascript]": {
-        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
             "source.fixAll": true,
@@ -149,45 +149,32 @@
 
     <-------------------<( BETTER COMMENTS )>------------------->             */
     "better-comments.tags": [
-        //  |> Hello World! <|    ("Space After Highlighter Required")
-        //  <| Hello World! |>    ("Space After Highlighter Required")
-        //  <|====== 6x('=')
-        //  <|====|>
-        //     ~~ <| HELLO~WORLD |> ~~
-        //     -- <| HELLO_WORLD |> --
-        //     <<--<| HELLO-WORLD |>-->>
-        //     ~~<| HELLO~WORLD |>~~
-        //     --<| HELLO_WORLD |>--
         {
-            "tag": " |> ",
-            "color": "#FF3280",
+            // <|| PUBLIC ||>
+            "tag": "<|| PUBLIC ||>",
+            "color": "#FFD438E0",
             "strikethrough": false,
             "underline": false,
             "backgroundColor": "transparent",
-            "bold": true,
+            "bold": false,
             "italic": false
         },
+
+        //   <|| PRIVATE ||>
         {
-            "tag": " <| ",
-            "color": "#FF3280",
+            "tag": "<|| PRIVATE ||>",
+            "color": "#9070FFE0",
             "strikethrough": false,
             "underline": false,
             "backgroundColor": "transparent",
-            "bold": true,
+            "bold": false,
             "italic": false
         },
+
         {
-            "tag": " <|[",
-            "color": "#FF3280",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        {
-            "tag": " <|(",
-            "color": "#FF3280",
+            // <||T||>  "Hello World!"
+            "tag": "<||T||>",
+            "color": "#20BB2A",
             "strikethrough": false,
             "underline": false,
             "backgroundColor": "transparent",
@@ -196,53 +183,9 @@
         },
 
         {
-            "tag": "~~ <|",
-            "color": "#FF3280",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        {
-            "tag": "~~<|",
-            "color": "#FF3280",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        {
-            "tag": "-- <|",
-            "color": "#FF3280",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        {
-            "tag": "--<|",
-            "color": "#FF3280",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        {
-            "tag": " <|=",
-            "color": "#FF3280",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        {
-            "tag": "<|====",
-            "color": "#FF3280",
+            // [++] "Hello World!"
+            "tag": "[++]",
+            "color": "#20BB2A",
             "strikethrough": false,
             "underline": false,
             "backgroundColor": "transparent",
@@ -250,137 +193,264 @@
             "italic": false
         },
 
-        // ==>  Hello World! ("Space After Highlighter Required")
-        // |=>   Hello World! ("Space After Highlighter Required")
-        // <=|  Hello World! ("Space After Highlighter Required")
-
-        // <==  Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
-
-        // =>   Hello World! ("Space After Highlighter Required")
-        // <=>  Hello World! ("Space After Highlighter Required")
-
-        // <|==|> `~ 1! 2@ 3# 4$ 5% 6^ 7& 8* 9( 0) -_ =+
-
-        // <=====> [] {} <> () |\ /? ,. :; '' "" ``
-        // <============================================
-        // <==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==*==>
-
         {
-            "tag": "<========",
-            "color": "#FF8040",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": "<==",
-            "color": "#FF8040",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": " => ",
-            "color": "#FF8040",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": " ==> ",
-            "color": "#FF8040",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": " <=> ",
-            "color": "#FF8040",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": " <=|",
-            "color": "#FF8040",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": "|=>",
-            "color": "#FF8040",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        // -> Hello World
-        // --> Hello Multi-Verse!
-        /*
-     <-- Hello
-    */
-        // <--> `~ 1! 2@ 3# 4$ 5% 6^ 7& 8* 9( 0) -_ =+
-        // <---> [] {} <> () |\ /? ,. :; '' "" ``
-        // ----- 5x('-')
-        // ---------------------------------------------
-        // <--------------------------------------------------------->
-        // <-- ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ ~*~ -->
-        {
-            "tag": "--> ",
-            "color": "#80D040",
+            // <||F||>  "Hello World!"
+            "tag": "<||F||>",
+            "color": "#CC2A34",
             "strikethrough": false,
             "underline": false,
             "backgroundColor": "transparent",
             "bold": true,
             "italic": false
         },
+
         {
+            //  [--] "Hello World!"
+            "tag": "[--]",
+            "color": "#CC2A34",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+
+        // [!]  |> ATTENTION, the line of code @ line#-32 is deprecated!
+        {
+            "tag": "[!]  |>",
+            "color": "#FFFF00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        // [!!]  |> This block has a bug in it somewhere...
+        {
+            "tag": "[!!]  |>",
+            "color": "#FF0000",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+
+        {
+            // (!!) WARNING |> The parameter must be set right!
+            "tag": "(!!) WARNING |>",
+            "color": "#FFFF00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            // (!!) ISSUE |> An error keeps occuring intermitantly...
+            "tag": "(!!) ISSUE |>",
+            "color": "#FF0000",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+
+        {
+            // <--*----------------<( HELLO WORLD! )>----------------*-->
             "tag": "<--",
-            "color": "#80D040",
+            "color": "#FFA000",
             "strikethrough": false,
             "underline": false,
             "backgroundColor": "transparent",
-            "bold": true,
+            "bold": false,
             "italic": false
         },
+
         {
-            "tag": "->",
-            "color": "#80D040",
+            // <--*----------------<( HELLO WORLD! )>----------------*-->
+            "tag": "<--*",
+            "color": "#FFA000",
             "strikethrough": false,
             "underline": false,
             "backgroundColor": "transparent",
-            "bold": true,
+            "bold": false,
             "italic": false
         },
-        // ~> Hello World! ("Space After Highlighter Required")
-        // <~ Hello World! ("Space After Highlighter Required")
-        // << Hello World! ('No Space Needed')
-        // >> Hello World! ('No Space Needed')
-        // ~~>> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll
-        // <<~~ Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll
-        // <<~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>>
-        // << << Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy
-        // >> >> Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy
-        // <~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~>
-        // <<~~~|HELLO ANDREW|~~~>>
-        // ~> Hello World!!!
+
         {
-            "tag": ">> ",
-            "color": "#18B8FF",
+            // --> 'Hello World!'
+            "tag": " --> ",
+            "color": "#FFA000",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+
+        {
+            // -> Hello World!
+            "tag": " ->",
+            "color": "#FFA000",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+
+        {
+            // <==*==*==*==*==*==[ Enter-Text ]==*==*==*==*==*==>
+            "tag": "<==*==",
+            "color": "#00B4FF",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+
+        {
+            // <== Qty of Bytes
+            "tag": " <== ",
+            "color": "#00B4FF",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+
+        {
+            // ==> (2020-\-NOVEMBER-\-9th)
+            "tag": " ==> ",
+            "color": "#00B4FF",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+
+        {
+            // => (2020-\-NOVEMBER-\-9th)
+            "tag": " => ",
+            "color": "#00B4FF",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            /*
+            <|==<>==<>==<>==<>==| EXTRA-LARGE CODE-SPLITTER |==<>==<>==<>==<>==|>
+            */
+            "tag": "<|==",
+            "color": "#FF8818",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+
+        {
+            // |> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
+            "tag": " |> ",
+            "color": "#FF8818",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+
+        {
+            //  <|( HELLO-WORLD! )|>
+            "tag": " <|(",
+            "color": "#FF8818",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            //  <|[ HELLO WORLD! ]|>
+            "tag": " <|[",
+            "color": "#FF8818",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+
+        {
+            //      <| HELLO WORLD! |>
+            "tag": " <| ",
+            "color": "#FF8818",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+
+        {
+            // >=> Hello World!
+            "tag": " >=> ",
+            "color": "#F83272",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+
+        {
+            // <=<( HELLO WORLD! )>=>
+            "tag": "<=<",
+            "color": "#F83272",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+
+        {
+            // <=<=================>=>
+            "tag": "<=<*",
+            "color": "#F83272",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            /*
+             * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+             * HELLO WORLD!                                              */
+            "tag": " *",
+            "color": "#F83272",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            /*
+
+
+..........................................................................................*/
+            "tag": "...",
+            "color": "#FF2424",
             "strikethrough": false,
             "underline": false,
             "backgroundColor": "transparent",
@@ -389,301 +459,63 @@
         },
 
         {
-            "tag": "<<",
-            "color": "#18B8FF",
+            // >-> HELLO WORLD!
+            "tag": " >->",
+            "color": "#00CC00",
             "strikethrough": false,
             "underline": false,
             "backgroundColor": "transparent",
-            "bold": true,
+            "bold": false,
             "italic": false
         },
 
         {
-            "tag": "~> ",
-            "color": "#18B8FF",
+            // <-< FIXME
+            "tag": "<-<",
+            "color": "#00CC00",
             "strikethrough": false,
             "underline": false,
             "backgroundColor": "transparent",
-            "bold": true,
+            "bold": false,
+            "italic": false
+        },
+        {
+            // >> HELLO WORLD
+            "tag": " >> ",
+            "color": "#00CC00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
             "italic": false
         },
 
         {
-            "tag": " <~",
-            "color": "#18B8FF",
+            // <<---------------------->>
+            "tag": " <<",
+            "color": "#00CC00",
             "strikethrough": false,
             "underline": false,
             "backgroundColor": "transparent",
-            "bold": true,
+            "bold": false,
             "italic": false
         },
 
+        {
+            /*
+____________________________________________________________________________________________
+            */
+            "tag": "__",
+            "color": "#FFFFFF",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
         {
             "tag": " ~~> ",
-            "color": "#18B8FF",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-
-        {
-            "tag": "<~~",
-            "color": "#18B8FF",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-
-        {
-            "tag": "~~~>",
-            "color": "#18B8FF",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-
-        {
-            "tag": "<~~~",
-            "color": "#18B8FF",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-
-        {
-            "tag": "~~>>",
-            "color": "#18B8FF",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-
-        //  ||> HELLO WORLD! <||
-        //  <|| HELLO WORLD! ||>
-        //  <||=================================||>
-        //  <||---------------------------------||>
-        //  <||~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~||>
-        //  <||_________________________________||>
-        //  <|| . . . . . . . . . . . . . . . . ||>
-        //  <|| ******************************* ||>
-        //  <||+++++++++++++++++++++++++++++++++||>
-        //  <|| ``````````````````````````````` ||>
-        //  <|||||||||||||||||||||||||||||||||||||>
-        //  <||>*<*>*<*>*<*>*<*>*<*>*<*>*<*>*<*>||>
-        //  <||><*><*><*><*><*><*><*><*><*><*><||>
-        //  <||>o<(X)>o<(X)>o<(X)>o<(X)>o<(X)>o<||>
-        //  <||XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX||>
-        //  <||xX|XxX|XxX|XxX|XxX|XxX|XxX|XxX|Xx||>
-        //  <|||><||><|><||><(~8~)><||><|><||><|||>
-        //  <||OoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoO||>
-        //  <||x|X|x||> * <||x|X|x||> * <||x|X|x||>
-        {
-            "tag": "||>",
-            "color": "#DDBB40",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        {
-            "tag": "<||",
-            "color": "#DDBB40",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-
-        {
-            "tag": "<||==",
-            "color": "#DDBB40",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        {
-            "tag": "____",
-            "color": "#DDBB40",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        // >--> Hello World!
-        // >-> Hello World!
-        // >>--> Hello World!
-        // >>-> Hello World!
-        // >-->> Hello World!
-        // >->> Hello World!
-        // >>-->> Hello World!
-        // >>-> Hello World!
-        // ======
-        // ===========================
-        // >>>
-        {
-            "tag": ":",
-            "color": "#B05FF4",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        {
-            "tag": "<|:|>",
-            "color": "#B05FF4",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        {
-            "tag": "<|===:===|>",
-            "color": "#B05FF4",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-
-        {
-            "tag": "<|==:==|>",
-            "color": "#B05FF4",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        {
-            "tag": "<|=:=|>",
-            "color": "#B05FF4",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-
-        {
-            "tag": "===",
-            "color": "#B05FF4",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        {
-            "tag": ">>>",
-            "color": "#B05FF4",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        {
-            "tag": ">>->",
-            "color": "#B05FF4",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        {
-            "tag": ">>-->",
-            "color": "#B05FF4",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        {
-            "tag": ">>->>",
-            "color": "#B05FF4",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        {
-            "tag": ">->",
-            "color": "#B05FF4",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        {
-            "tag": ">->>",
-            "color": "#B05FF4",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        {
-            "tag": ">>-->>",
-            "color": "#B05FF4",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        {
-            "tag": ">-->",
-            "color": "#B05FF4",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        {
-            "tag": ">-->>",
-            "color": "#B05FF4",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        // <*>  Hello World! ("Space After Highlighter Required")
-        // <>   Hello World! ("Space After Highlighter Required")
-        //  *   Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
-        //  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-        // ........................................................................................
-        // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        // *      1x ('*')
-        // ...    3x ('.')
-        // ^^^^^  5x ('^')
-        {
-            "tag": "<>",
-            "color": "#D2D2C8",
+            "color": "#FFFFFF",
             "strikethrough": false,
             "underline": false,
             "backgroundColor": "transparent",
@@ -691,76 +523,20 @@
             "italic": false
         },
         {
-            "tag": "<*>",
-            "color": "#D2D2C8",
+            "tag": " <> ",
+            "color": "#FFFFFF",
             "strikethrough": false,
             "underline": false,
             "backgroundColor": "transparent",
             "bold": false,
             "italic": false
         },
-        {
-            "tag": " * ",
-            "color": "#D2D2C8",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": "...",
-            "color": "#D2D2C8",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "#transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": "`````",
-            "color": "#D2D2C8",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "#transparent",
-            "bold": false,
-            "italic": false
-        },
-        // // Crissed-Out
+
         {
             "tag": "//",
-            "color": "#545468",
+            "color": "#00B4FF",
             "strikethrough": true,
             "underline": false,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        // !!|> !!ISSUE!!
-        // !!|> !!ERROR!!
-        // !!|> !!BUG!!
-        // !!|> !!BROKEN!!
-        // !!|> !!FIX IT!!
-        {
-            "tag": " !!|> ",
-            "color": "#FF1F00",
-            "strikethrough": false,
-            "underline": true,
-            "backgroundColor": "transparent",
-            "bold": true,
-            "italic": false
-        },
-        // !|> WARNING
-        // !|> CUATION
-        // !|> SLOW
-        // !|> PROBLIMATIC
-        // !|> NEEDS ATTENTION
-        // !|> DEPRECATED
-        {
-            "tag": " !|> ",
-            "color": "#F8FF00",
-            "strikethrough": false,
-            "underline": true,
             "backgroundColor": "transparent",
             "bold": true,
             "italic": false
