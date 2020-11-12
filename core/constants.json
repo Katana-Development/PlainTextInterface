@@ -1,0 +1,3 @@
+{
+    "E_PRAM_PERMIS_TYPE": "Type-Error:\n     \"A TypeError has occured. The data-type of the argument that was passed \n into class TextDocument's parameter 'filePermis' was invalid. The parameter\n 'filePermis' only accepts 3 arguments, each of the dataType string.\"\n\t(A): ALL    -  (666 | -rw-rw-rw-)\n\t(B): GROUP  -  (664 | -rw-rw-r--)\n\t(C): OWNER  -  (644 | -rw-------)\n"
+}

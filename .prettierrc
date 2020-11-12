@@ -1,18 +1,18 @@
 {
-    "printWidth": 85,
-    "tabWidth": 4,
-    "useTabs": false,
-    "singleQuote": true,
-    "semi": true,
-    "arrowParens": "always",
-    "trailingComma": "none",
-    "insertPragma": true,
-    "requirePragma": false,
+   "printWidth": 99,
+   "tabWidth": 3,
+   "useTabs": false,
+   "singleQuote": true,
+   "semi": true,
+   "arrowParens": "always",
+   "trailingComma": "none",
+   "insertPragma": true,
+   "requirePragma": false,
 
-    "overrides": [
-        {
-            "files": [".prettierrc", "eslintrc.json"],
-            "options": { "parser": "json" }
-        }
-    ]
+   "overrides": [
+      {
+         "files": [".prettierrc", "eslintrc.json"],
+         "options": { "parser": "json" }
+      }
+   ]
 }

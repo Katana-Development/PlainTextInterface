@@ -19,7 +19,10 @@ package.json
 .sandbox/
 .test.js
 .testlog.txt
+
+# Files for Testing Text Handling Class
 .psuedotext.txt
+psuedotext.txt
 
 # Process Logs & Log-Dirs
 .cache/
