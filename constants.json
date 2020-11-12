@@ -1,0 +1,36 @@
+{
+   "errorMessages": {
+      "ERR_MSG_FPATH_TYPE": "\n\"A Type-Error has occured! The filepath agrument passed into class TextDocument's constructor is of an 'INVALID TYPE'. The file path must be a string in a typical filepath format, furthermore; the filepath must be the filepath of a plain-text document that end with a (.txt) extention. Exmp.('./sumfile.txt')\"\n",
+
+      "ERR_MSG_FPATH_FTYPE": "\n\"A Syntax-Error has occured! The filepath agrument passed into class TextDocument's constructor is an invalid file-type. Class TextDocument only accepts plain-text files that end in a '.txt' extention. If you feel that you did pass a plain-text file into the constructor, check to make sure it is formatted properly and has the '.txt' extention tacked to the end of its file name. \n\"",
+
+      "E_MSG_e_": "",
+
+      "E_MSG_f_": "",
+
+      "E_MSG_g_": "",
+
+      "E_MSG_h_": ""
+   },
+
+   "a": {
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": ""
+   },
+
+   "b": {
+      "a": "",
+      "b": "",
+      "c": "",
+      "d": ""
+   },
+
+   "c": ["", "", "", ""],
+   "d": "",
+   "e": "",
+   "f": "0o200",
+   "g": 0,
+   "h": 0
+}

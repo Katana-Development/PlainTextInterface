@@ -3,9 +3,9 @@
    "window.zoomLevel": -0.5,
 
    //  |>  Font-Settings: 'Editor'
-   "editor.fontSize": 14.25,
+   "editor.fontSize": 14,
    "editor.fontWeight": 400,
-   "editor.lineHeight": 24,
+   "editor.lineHeight": 23,
    "editor.fontFamily": "'Cascadia Code'",
    "editor.fontLigatures": true,
 
@@ -67,9 +67,9 @@
    "html.format.indentInnerHtml": true,
 
    //  |>  Line/Line-Number Settings
-   "editor.rulers": [80, 100, 102, 150],
-   "editor.wordWrapColumn": 102,
-   "html.format.wrapLineLength": 150,
+   "editor.rulers": [60, 90, 120],
+   "editor.wordWrapColumn": 92,
+   "html.format.wrapLineLength": 120,
    "editor.foldingStrategy": "indentation",
    "editor.renderLineHighlight": "all",
    "editor.wordWrap": "wordWrapColumn",
@@ -79,7 +79,6 @@
    //  |>  Minimap Options/Settings
    "editor.minimap.maxColumn": 80,
    "editor.minimap.scale": 1,
-   "editor.minimap.enabled": true,
    "editor.minimap.renderCharacters": true,
    "editor.minimap.showSlider": "always",
    "editor.minimap.size": "proportional",
@@ -152,7 +151,7 @@
       //   ||> HELLO WORLD!
       {
          "tag": " ||> ",
-         "color": "#2864E8",
+         "color": "#2882F2",
          "strikethrough": false,
          "underline": false,
          "backgroundColor": "transparent",
@@ -573,6 +572,7 @@ ________________________________________________________________________________
       " <=<( TODO TEST )>=> ",
       " <=<( TODO FIX )>=> ",
       " <=<( TODO ISSUE )>=> ",
+      " <=<( TODO CREATE )>=> ",
       // >> Group-B
       "<||[TODO]||>",
       "<||[TODO TEST]||>",
@@ -595,7 +595,8 @@ ________________________________________________________________________________
          " <=<( TODO REMOVE )>=> ",
          " <=<( TODO TEST )>=> ",
          " <=<( TODO FIX )>=> ",
-         " <=<( TODO ISSUE )>=> "
+         " <=<( TODO ISSUE )>=> ",
+         " <=<( TODO CREATE )>=> "
       ],
 
       "<||[TODO]||>": [

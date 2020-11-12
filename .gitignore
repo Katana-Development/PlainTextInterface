@@ -16,11 +16,8 @@ package.json
 .Env/
 
 # Files for Testing
-.sandbox/
+.testing/
 .test.js
-.testlog.txt
-
-# Files for Testing Text Handling Class
 .psuedotext.txt
 psuedotext.txt
 
