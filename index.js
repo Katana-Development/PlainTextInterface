@@ -10,12 +10,15 @@
  **/
 
 /*
-                     <||| [TODO LIST] |||>
+   
+  -->                                <|[TODO LIST]|>                                <--
+  ||> --------------------------------------^-------------------------------------- <||
    <=<( TODO CREATE )>=> "Create a new error class for FileType Errorz." `
-   <=<( TODO CREATE )>=> "Create a set range for bufferSize"
-   <=<( TODO ADD )>=>  Add a maxStorage parameter to TextDocument for setting buffer size
+   
    <=<( TODO CREATE )>=> "Create the following methods addText(text), appendText(text), saveFile(), rmFile() and changeFilepath(newFilepath) "
-   <=<( TODO CREATE )>=> "Hello World!";
+   
+   <=<( TODO CREATE )>=> "Test the maxStorage RangeErrors, and proof-read the their messages";
+
 
 
 
@@ -30,9 +33,15 @@ const { O_CREAT, O_RDWR } = fs.constants;
 const { Buffer } = require('buffer');
 
 const {
-   ERR_MSG_FPATH_TYPE,
-   ERR_MSG_FPATH_FTYPE
+   E_MSG_FPATH_FTYP,
+   E_MSG_FPATH_TYP,
+   E_MSG_RNG_MAX,
+   E_MSG_RNG_MIN
 } = require('./constants.json').errorMessages;
+const {
+   TXTDOC_MAX_BYTES,
+   TXTDOC_MIN_BYTES
+} = require('./constants.json').numericConstants;
 
 /**
  * @name TextDocument
@@ -46,13 +55,26 @@ class TextDocument {
    #text;
 
    constructor(fpath = null, maxStorage = 1000000) {
-      if (typeof fpath != 'string') throw new TypeError(ERR_MSG_FPATH_TYPE);
-      if (extname(fpath) != '.txt') throw new Error(ERR_MSG_FPATH_FTYPE);
-
+      const bytes = maxStorage;
       this.#fpath = fpath;
-      this.#buff = Buffer.alloc(1000000);
+
+      if (typeof this.#fpath != 'string') {
+         throw new TypeError(E_MSG_FPATH_TYP);
+      }
+
+      if (extname(this.#fpath) != '.txt') {
+         throw new Error(E_MSG_FPATH_FTYP);
+      }
+
+      if (bytes > TXTDOC_MAX_BYTES) {
+         throw new RangeError(E_MSG_RNG_MAX);
+      } else if (bytes < TXTDOC_MIN_BYTES) {
+         bytes = TXTDOC_MIN_BYTES;
+      }
+
       this.#fd = fs.openSync(this.#fpath);
       this.#stat = fs.statSync(this.#fpath);
+      this.#buff = Buffer.alloc(1000000);
 
       fs.chmodSync(fpath, 0o664);
       fs.readSync(this.#fd, this.#buff, { length: this.#stat.size });

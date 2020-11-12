@@ -1,22 +1,18 @@
 {
    "errorMessages": {
-      "ERR_MSG_FPATH_TYPE": "\n\"A Type-Error has occured! The filepath agrument passed into class TextDocument's constructor is of an 'INVALID TYPE'. The file path must be a string in a typical filepath format, furthermore; the filepath must be the filepath of a plain-text document that end with a (.txt) extention. Exmp.('./sumfile.txt')\"\n",
+      "E_MSG_FPATH_TYP": "\n\"A Type-Error has occured! The filepath agrument passed into class TextDocument's constructor is of an 'INVALID TYPE'. The file path must be a string in a typical filepath format, furthermore; the filepath must be the filepath of a plain-text document that end with a (.txt) extention. Exmp.('./sumfile.txt')\"\n",
 
-      "ERR_MSG_FPATH_FTYPE": "\n\"A Syntax-Error has occured! The filepath agrument passed into class TextDocument's constructor is an invalid file-type. Class TextDocument only accepts plain-text files that end in a '.txt' extention. If you feel that you did pass a plain-text file into the constructor, check to make sure it is formatted properly and has the '.txt' extention tacked to the end of its file name. \n\"",
+      "E_MSG_FPATH_FTYP": "\n\"A Syntax-Error has occured! The filepath agrument passed into class TextDocument's constructor is an invalid file-type. Class TextDocument only accepts plain-text files that end in a '.txt' extention. If you feel that you did pass a plain-text file into the constructor, check to make sure that the path is properly formatted, you also need to ensure that the filename has the '.txt' extention, without it you will recieve this error.\"\n",
 
-      "E_MSG_e_": "",
-
-      "E_MSG_f_": "",
+      "E_MSG_RNG_MAX": "\n\"  Error! OUT OF RANGE! The argument being passed into the  maxStorage parameter, located in the TextDocument-Constructor, exceeds the maximum limit allowed. Becuase of preformance issues that arise when handling text files that are several megabytes in size, TextDocument limits the size of the text document that it will handle to 4MB, (or 4194304 Bytes), therefore; the upper limit of the maxStorage parameter's range is 4194304. The lower limit is (0.125MB or 131072 Bytes). If the lower-limit is not met, the maxStorage parameter is automaticly raised to the minimum requirement.\" \n\n\n * NOTE: (\"It's highly advised that text files be kept under 20971520-Bytes. At this size preforance often drops signifcantly.\")  * \n\n",
 
       "E_MSG_g_": "",
-
       "E_MSG_h_": ""
    },
 
-   "a": {
-      "a": "",
-      "b": "",
-      "c": "",
+   "numericConstants": {
+      "TXTDOC_MAX_BYTES": 4194304,
+      "TXTDOC_MIN_BYTES": 131072,
       "d": ""
    },
 
