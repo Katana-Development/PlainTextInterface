@@ -10,18 +10,12 @@
  **/
 
 /*
-
-
                      <||| [TODO LIST] |||>
    <=<( TODO CREATE )>=> "Create a new error class for FileType Errorz." `
-  
    <=<( TODO CREATE )>=> "Create a set range for bufferSize"
-  
    <=<( TODO ADD )>=>  Add a maxStorage parameter to TextDocument for setting buffer size
-  
    <=<( TODO CREATE )>=> "Create the following methods addText(text), appendText(text), saveFile(), rmFile() and changeFilepath(newFilepath) "
-
-
+   <=<( TODO CREATE )>=> "Hello World!";
 
 
 
@@ -51,7 +45,7 @@ class TextDocument {
    #stat;
    #text;
 
-   constructor(fpath = null) {
+   constructor(fpath = null, maxStorage = 1000000) {
       if (typeof fpath != 'string') throw new TypeError(ERR_MSG_FPATH_TYPE);
       if (extname(fpath) != '.txt') throw new Error(ERR_MSG_FPATH_FTYPE);
 
@@ -60,12 +54,10 @@ class TextDocument {
       this.#fd = fs.openSync(this.#fpath);
       this.#stat = fs.statSync(this.#fpath);
 
-      const testObj = {
-         fpath: this.#fpath,
-         fd: this.#fd,
-         fileSz: this.#stat.size
-      };
-      this.#text = '';
+      fs.chmodSync(fpath, 0o664);
+      fs.readSync(this.#fd, this.#buff, { length: this.#stat.size });
+
+      this.text = this.#buff.toString('utf-8');
    }
 
    get text() {
@@ -81,9 +73,9 @@ class TextDocument {
       const lineLen = maxCharsPerLine;
 
       let altText = '';
-      let charCount = lineLen;
-      let prevCount = 0;
       let line = '';
+      let prevCount = 0;
+      let charCount = lineLen;
 
       while (charCount <= text.length) {
          while (text.charAt(charCount) != ' ') {
