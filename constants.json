@@ -4,16 +4,18 @@
 
       "E_MSG_FPATH_FTYP": "\n\"A Syntax-Error has occured! The filepath agrument passed into class TextDocument's constructor is an invalid file-type. Class TextDocument only accepts plain-text files that end in a '.txt' extention. If you feel that you did pass a plain-text file into the constructor, check to make sure that the path is properly formatted, you also need to ensure that the filename has the '.txt' extention, without it you will recieve this error.\"\n",
 
-      "E_MSG_RNG_MAX": "\n\"  Error! OUT OF RANGE! The argument being passed into the  maxStorage parameter, located in the TextDocument-Constructor, exceeds the maximum limit allowed. Becuase of preformance issues that arise when handling text files that are several megabytes in size, TextDocument limits the size of the text document that it will handle to 4MB, (or 4194304 Bytes), therefore; the upper limit of the maxStorage parameter's range is 4194304. The lower limit is (0.125MB or 131072 Bytes). If the lower-limit is not met, the maxStorage parameter is automaticly raised to the minimum requirement.\" \n\n\n * NOTE: (\"It's highly advised that text files be kept under 20971520-Bytes. At this size preforance often drops signifcantly.\")  * \n\n",
+      "E_MSG_TXDOC_MAXBYT": "[!ERROR, OUT OF RANGE!]: The file passed into class TextDocument, via the constructors filepath parameter, exceeds the 'Maximum File-Size' allowed. In response to the preformance issues that occur when handling several MBs of text in a single document, the TextDocument class enforces a (2MB/1024k) limit (2097152-BYTES). Though the limit is set at (2.5MB), it is advised that text files be kept below (1.125MB), or (1179648-BYTES).\"\n\n\n * (NOTE: \"(1.25MB/1024k) is equivalant to an average of 600-680 pages of text that average 1848 - 2248 chars per page.\")\n\n",
 
-      "E_MSG_g_": "",
-      "E_MSG_h_": ""
+      "E_MSG_a_": "",
+      "E_MSG_b_": "",
+      "E_MSG_c_": "",
+      "E_MSG_d_": "",
+      "E_MSG_e_": "",
+      "E_MSG_f_": ""
    },
 
    "numericConstants": {
-      "TXTDOC_MAX_BYTES": 4194304,
-      "TXTDOC_MIN_BYTES": 131072,
-      "d": ""
+      "TXTDOC_MAX_BYTES": 2097152
    },
 
    "b": {

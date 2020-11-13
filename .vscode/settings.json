@@ -28,18 +28,15 @@
 
    //  |>  Workbench Settings
    "workbench.tree.indent": 16,
-   "workbench.editor.limit.value": 3,
+   "workbench.editor.limit.value": 4,
    "workbench.editor.limit.enabled": true,
-   "workbench.editor.showIcons": false,
+   "workbench.editor.showIcons": true,
    "workbench.tips.enabled": true,
    "workbench.editor.highlightModifiedTabs": true,
    "workbench.editor.tabCloseButton": "off",
-   "workbench.editor.tabSizing": "shrink",
    "workbench.tree.renderIndentGuides": "always",
    "workbench.view.alwaysShowHeaderActions": true,
    "workbench.editor.mouseBackForwardToNavigate": false,
-   "workbench.editor.labelFormat": "short",
-   "workbench.editor.pinnedTabSizing": "shrink",
 
    //  |>  Font-Settings: 'Terminal'
    "terminal.integrated.fontSize": 14,
@@ -77,7 +74,7 @@
    "html.format.wrapAttributes": "force-aligned",
 
    //  |>  Minimap Options/Settings
-   "editor.minimap.maxColumn": 80,
+   "editor.minimap.maxColumn": 60,
    "editor.minimap.scale": 1,
    "editor.minimap.renderCharacters": true,
    "editor.minimap.showSlider": "always",
@@ -148,6 +145,16 @@
 
     <-------------------<( BETTER COMMENTS )>------------------->             */
    "better-comments.tags": [
+      {
+         // *  |> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
+         "tag": " *  |>",
+         "color": "#56C416",
+         "strikethrough": false,
+         "underline": false,
+         "backgroundColor": "transparent",
+         "bold": false,
+         "italic": false
+      },
       //   ||> HELLO WORLD!
       {
          "tag": " ||> ",
@@ -370,17 +377,6 @@
             <|==<>==<>==<>==<>==| EXTRA-LARGE CODE-SPLITTER |==<>==<>==<>==<>==|>
             */
          "tag": "<|==",
-         "color": "#FF780F",
-         "strikethrough": false,
-         "underline": false,
-         "backgroundColor": "transparent",
-         "bold": false,
-         "italic": false
-      },
-
-      {
-         // |> Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
-         "tag": " |> ",
          "color": "#FF780F",
          "strikethrough": false,
          "underline": false,
@@ -651,5 +647,7 @@ ________________________________________________________________________________
          "iconColour": "#00C0FF",
          "gutterIcon": true
       }
-   }
+   },
+   "zenMode.hideTabs": false,
+   "workbench.editor.untitled.labelFormat": "name"
 }

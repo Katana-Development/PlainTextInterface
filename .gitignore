@@ -1,4 +1,5 @@
 # Git Ver-Control
+.gitignore.save
 .gitignore
 .gitconfig
 .git
@@ -13,10 +14,13 @@ node_modules
 package.json
 
 # Linux OS
-.Env/
+.ENV
+.Env
+.env
 
 # Files for Testing
 .testing/
+testing/
 .test.js
 .psuedotext.txt
 psuedotext.txt
